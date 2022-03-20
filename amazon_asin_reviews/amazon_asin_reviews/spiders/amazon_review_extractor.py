@@ -24,4 +24,3 @@ class AmazonSpider(scrapy.Spider):
         next_page = response.xpath('//a[contains(text(),"Next page")]/@href').get()
         if next_page is not None:
             yield response.follow(next_page, callback=self.parse)
-    
