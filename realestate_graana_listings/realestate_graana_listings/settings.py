@@ -10,3 +10,6 @@ DEFAULT_REQUEST_HEADERS = {
 }
 AUTOTHROTTLE_ENABLED= True
 AUTOTHROTTLE_TARGET_CONCURRENCY= 2
+ITEM_PIPELINES = {
+    'realestate_graana_listings.pipelines.RealestateGraanaListingsPipeline': 300
+}
